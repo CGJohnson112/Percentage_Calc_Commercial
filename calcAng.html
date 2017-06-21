@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1">
+	<title>Barbara Wright's Grant Calculator: Developing the Grant Budget</title>
+	 <!--code developed by C.G Johnson on June 21, 2017 (SuburbanStyle Productions, LLC). All rights reserved-->
+</head>
+<script src="js/angular.min.js"></script>
+<style>
+header, footer {
+	font-family: Times, serif;
+}
+
+table, th, td {
+	border: 1px solid white;
+	border-collapse: collapse;
+	font-family: arial, sans-serif;
+	
+}
+
+th, td {
+	padding: 0px;
+
+}
+
+#budgTable {
+	background-color: #c2c8ce;
+
+}
+
+header, footer {
+	text-align: center;
+}
+
+footer {
+	background-color: #90b5b1;
+	color: white;
+	padding: 5px;
+}
+
+.area {
+	padding-left: 20px;
+}
+
+.area2 {
+	color: green;
+	padding-left: 20px;
+}
+.currency {
+	text-align: right;
+	padding-right: 25px;
+}
+
+
+
+</style>
+<body>
+<header><h1>Developing the Budget</h1></header>
+
+<div id = "budgTable">
+<table style = "width: 100%">
+<!--table style: divided by titles/outputs or input blanks-->
+<tr>
+	<th><h3>Grant:</th><th><input type="number" ng-model = "grant" placeholder="Enter Grant amount"></h3></th>
+</tr>
+<br/>
+
+<tr>
+	<td class="area"><h3>Grant Entered:</td><td class="currency"> {{ grant | currency}}</h3></td>
+</tr>
+
+<tr>	
+	<td class="area"><h3>Personnel: </td><td class="currency">{{ grant * .30 | currency }}</h3></td>
+</tr>
+
+<tr>
+	<td class="area"><h3>Fringe: </td><td class="currency">{{ grant * .06 | currency }}</h3></td>
+</tr>
+
+<tr>
+	<td class="area"><h3>Travel: </td><td class="currency">{{ grant * .02  | currency}}</h3></td>
+</tr>
+
+<tr>
+	<td class="area"><h3>Equipment: </td><td class="currency">{{ grant * .02  | currency}}</h3></td>
+</tr>
+
+<tr>
+	<td class="area"><h3>Supplies: </td><td class="currency">{{ grant * .15 | currency }}</h3></td>
+</tr>
+
+<tr>
+	<td class="area"><h3>Contractual: </td><td class="currency">{{ grant * .20 | currency}}</h3></td>
+</tr>
+
+<!--input field for other expenses--> 
+<tr>
+	<td class="area"><h3>Other: </td><td class="currency"><input type="numeric" name="other" ng-model="other" placeholder="Enter other expenses"/></h3></td>
+</tr>
+
+<!--totals up the three ending categories-->
+<tr>
+	<td class="area2"><h3>Total Direct Charges: </td><td class="currency">{{ grant | currency }}</h3></td>
+</tr>	
+
+<tr>
+	<td class="area2"><h3>Total Indirect Charges: </td><td class="currency">{{ other | currency }}</h3></td>
+</tr>
+
+<tr>
+	<td class="area2"><h3>Total: </td><td class="currency">{{ (grant * 1) + (other * 1) | currency }}</h3></td>
+</tr>
+
+</table>
+
+
+
+
+ </div>
+<footer><h6>Barbara Wright, M.Ed, 2007-<span id="currentYear"></span>.  (Click on each of the blue links if you purchased the disk for sample researched information).</h6></footer>
+
+
+<script>
+//updates the current year in the footer
+var date = new Date();
+var year = date.getFullYear();
+document.getElementById('currentYear').innerHTML = year;
+  
+
+</script>
+
+</body>
+</html>
