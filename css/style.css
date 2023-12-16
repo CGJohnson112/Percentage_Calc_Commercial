@@ -9,10 +9,6 @@ footer {
 	padding: 5px;
 }
 
-
-
-
-
 /*pie chart styles*/
 .wrapper{
     display: flex;
@@ -128,6 +124,12 @@ footer {
 .entry .entry-value{
     display: none;
     transition: all 500ms linear;
+    font-size:15px;
+}
+
+.entry-amount {
+    font-size:12px;
+    font-weight: bold;
 }
 .entry:hover .entry-value{
     display: block;
@@ -140,54 +142,6 @@ footer {
     filter: invert();
 }
 
-.key-wrap label{
-    display: block;
-    border: 1px solid;
-    width: 50px;
-    text-align: center;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-bottom: 8px;
-}
-
-
-.text{
-    display: none;
-    margin-left: -50px;
-    position: absolute;
-    margin-top: 50px;
-    font-size: 20px;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    border-bottom: 5px solid ;
-    border-top: 5px solid ;
-}
-.key-wrap label:active{
-    opacity: .5;
-}
-.rice-key:checked ~ .rice-text, .beans-key:checked ~ .beans-text, .plantain-key:checked ~ .plantain-text,  .potato-key:checked ~ .potato-text, .yam-key:checked ~ .yam-text, .pasta-key:checked ~ .pasta-text{
-    display: block;
-}
-
-.rice-text{
-    border-color: black;
-}
-.beans-text{
-    border-color:  pink;
-}
-.plantain-text{
-    border-color:  purple;
-}
-.potato-text{
-    border-color:  limegreen;
-}
-.yam-text{
-    border-color:  wheat;
-}
-.pasta-text{
-    border-color:  skyblue;
-}
-
 @keyframes pie-size {
     from{
       width:0px;
@@ -197,37 +151,5 @@ footer {
       height: 400px;
     }
   }
-  @keyframes display-key {
-    from{
-      visibility: hidden;
-    }
-    to{
-      visibility: visible;
-    }
-  }
-  .rice-label{
-    background-color: lightyellow;
-    visibility: hidden;
-    animation: display-key 500ms 1s  ease forwards;
-  }
-  .beans-label{
-    background-color: pink;
-    animation: display-key 500ms 1.5s  ease forwards;
-  }
-  .plantain-label{
-    background-color: purple;
-    color: white;
-    animation: display-key 500ms 2s  ease forwards;
-  }
-  .potato-label{
-    background-color: limegreen;
-    animation: display-key 500ms 2.5s  ease forwards;
-  }
-  .yam-label{
-    background-color: wheat;
-    animation: display-key 500ms 3s  ease forwards;
-  }
-  .pasta-label{
-    background-color: skyblue;
-    animation: display-key 500ms 3.5s  ease forwards;
-  }
+
+  

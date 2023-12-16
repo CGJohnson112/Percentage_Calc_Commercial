@@ -13,38 +13,41 @@
 <body>
 <header><h1>Developing the Budget Table and Pie Chart</h1></header>
 <!--pie chart begins-->
+
+
+<div class="container">
 <div class="wrapper">
 
 <div class="pie-wrap" ng-model="grant">
 	
 
 		<div class="light-yellow entry">
-			<p>{{ grant * .20 | currency}}</p>
+			<p class="entry-amount">{{ grant * .20 | currency}}</p>
 			<p class="entry-value">Contractual</p>
 		</div>
 		
 		<div class="sky-blue entry">
-			<p>{{ grant * .30 | currency }}</p>
+			<p class="entry-amount">{{ grant * .30 | currency }}</p>
 			<p class="entry-value">Personnel</p>
 		</div>
 		
 		<div class="pink entry">
-			<p>{{ grant * .06 | currency }}</p>
+			<p class="entry-amount">{{ grant * .06 | currency }}</p>
 			<p class="entry-value">Fringe</p> </p>
 		</div>
 		
 		<div class="purple entry">
-			<p>{{ grant * .02  | currency}}</p>
+			<p class="entry-amount">{{ grant * .02  | currency}}</p>
 			<p class="entry-value">Travel</p>
 		</div>
 		
 		<div class="green entry">
-			<p>{{ grant * .02  | currency}}</p>
+			<p class="entry-amount">{{ grant * .02  | currency}}</p>
 			<p class="entry-value">Equipment</p>
 		</div>
 		
 		<div class="wheat entry">
-			<p>{{ grant * .15 | currency }}</p>
+			<p class="entry-amount">{{ grant * .15 | currency }}</p>
 			<p class="entry-value">Supplies</p>
 		</div>
 		
@@ -59,7 +62,7 @@
 <table class="table">
 <!--table style: divided by titles/outputs or input blanks-->
 <tr>
-	<th><h3>Grant:</th><th><input type="number" ng-model = "grant" placeholder="Enter Grant amount"></h3></th>
+	<th><h3>Grant:</th><th><input type="number" ng-model = "grant" class="form-control" placeholder="Enter Grant amount"></h3></th>
 </tr>
 <br/>
 
@@ -93,7 +96,7 @@
 
 <!--input field for other expenses--> 
 <tr>
-	<td class="area"><h3>Other: </td><td class="currency"><input type="numeric" name="other" ng-model="other" id="other" placeholder="Enter other expenses"/></h3></td>
+	<td class="area"><h3>Other: </td><td class="currency"><input type="numeric" name="other" ng-model="other" id="other" class="form-control" placeholder="Enter other expenses"/></h3></td>
 </tr>
 
 <!--totals up the three ending categories-->
@@ -113,6 +116,8 @@
 
 
  </div>
+
+</div><!--end body container-->
 <footer><h6>Copyright 2007-<span id="currentYear"></span>.  (Click on each of the blue links if you purchased the disk for sample researched information).</h6></footer>
 <script src="js/script.js"></script>
 <!-- Latest compiled JavaScript -->
