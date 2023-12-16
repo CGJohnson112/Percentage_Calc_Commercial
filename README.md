@@ -1,7 +1,7 @@
 # Percentage_Calc_Commercial
 Produced for client of grant writing materials June 2017 AngJS
 
-*****pie chart still needs to accurately reflect the percentages of the data, although the percentages are always the same regardless of the dollar increase.
+*****Dec 16 2023-->pie chart still needs to accurately reflect the percentages of the data, although the percentages are always the same regardless of the dollar increase.
 
 Dec 2023: site has been completely overhauled. App still works off an embedded legacy AngularJS file. 
 -HTML pie chart added, linked to Angular to dynamically display data as table data is entered (credit: https://blog.logrocket.com/build-interactive-pie-charts-css-html/)
